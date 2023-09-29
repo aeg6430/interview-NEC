@@ -77,15 +77,15 @@ namespace Question1
             string validExpireDate="";
             string validExpireHour = "";
 
-            Regex rgxExprieDate = new Regex(@"^(?:19|20)\d\d(?:0[1-9]|1[0-2])(?:0[1-9]|[12][0-9]|3[01])$");
+            Regex rgxExpireDate = new Regex(@"^(?:19|20)\d\d(?:0[1-9]|1[0-2])(?:0[1-9]|[12][0-9]|3[01])$");
             
 
-            while (string.IsNullOrEmpty(validExpireDate) || !rgxExprieDate.IsMatch(validExpireDate))
+            while (string.IsNullOrEmpty(validExpireDate) || !rgxExpireDate.IsMatch(validExpireDate))
             {
                 Console.WriteLine("輸入商品保存期限( YYYYMMDD )");
                 inputExpireDate = Console.ReadLine();
 
-                if (rgxExprieDate.IsMatch(inputExpireDate))
+                if (rgxExpireDate.IsMatch(inputExpireDate))
                 {
                     validExpireDate = inputExpireDate;
                 }
